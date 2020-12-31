@@ -1,7 +1,6 @@
 # ansible-fedora-workstation
 
-This playbook bootstraps and manages user-critical apps and applications
-on a personal workstation
+ansible meta-playbook for bootstrapping and managing workstation machines
 
 ## Usage
 
@@ -13,11 +12,7 @@ Options for -e are:
 - personal_ubuntu=true
 - work_ubuntu=true
 
-Where <the_targeted_pc> is the configuration file you have made for yourself (template available at machine_configurations/000-template.yml
-
-Please also review the options in the vars/ folder.
-
-If you are using my roles from the [ansible-workstation group](https://gitlab.com/ansible-opletal/ansible-workstation), you can include your app config files under config_files/<directory_of_app>
+Where <the_targeted_pc> is the configuration file you have made for yourself (template available at machine_configurations/000-template.yml, with some more examples in the same folder)
 
 ## CI Tested
 - **Debian** (testing) [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/debian.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/debian.yml?)
