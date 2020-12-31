@@ -1,0 +1,86 @@
+---
+upgrade_system: false
+src_dir: "$HOME/workspace/src"
+
+install_org: true
+install_aerc: true
+install_browserpass: true
+install_sway: true
+install_packages: true
+install_configuration: true
+install_terminal: true
+install_alacritty: true
+install_neovim: true
+install_tmux: true
+install_ranger: true
+install_fonts: true
+
+install_logiops: false
+
+# BROWSER(S) TO INSTALL
+install_firefox: true
+install_chromium: true
+
+install_chrome: false
+install_brave: false
+
+packages:
+  - elogind
+  - eudev
+  - dbus
+  - dbus-doc
+  - dbus-glib
+  - dbus-libs
+  - pm-utils
+  - man-pages
+  - network-manager-applet
+  - networkmanager
+  - networkmanager-elogind
+  - networkmanager-openvpn
+  - nmap
+  - neofetch
+  - ripgrep
+  - fzf
+  - smartmontools
+  - weechat
+  - weechat
+  - weechat-doc
+  - weechat-python
+  - virt-manager
+  - nodejs
+  - git
+  - picocom
+  - obs-studio
+  - wlrobs
+  - python3
+  - bind-tools
+  - pipewire
+  - pipewire-jack
+  - pipewire-pulse
+  - util-linux
+  - gnome-themes-extra
+# dev files
+  - perl-yaml-libyaml
+  - python3-dev
+  - libressl-dev
+
+flatpaks:
+  - com.spotify.Client
+  - com.gigitux.gtkwhats
+  - org.qbittorrent.qBittorrent
+  - org.gimp.GIMP
+  - org.gnome.Extensions
+  - org.keepassxc.KeePassXC
+  - org.libreoffice.LibreOffice
+  - org.remmina.Remmina
+  - org.signal.Signal
+  - org.telegram.desktop
+  - com.github.tchx84.Flatseal
+  - org.filezillaproject.Filezilla
+  - org.gnome.Maps
+  - nl.hjdskes.gcolor3
+  - org.gnome.Weather
+
+pip_packages:
+  - podman-compose
+  - pynvim

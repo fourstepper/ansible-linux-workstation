@@ -1,0 +1,153 @@
+---
+- hosts: all
+
+  pre_tasks:
+    - name: Run whoami without to get the user name
+      command: whoami
+      changed_when: false
+      register: whoami
+
+    - name: Set a fact with the user name.
+      set_fact:
+        ansible_user: "{{ whoami.stdout }}"
+
+    - name: Give systemd some time to initialize
+      pause:
+        seconds: 10
+
+    - name: Install python3-apt
+      package:
+        name: python3-apt
+        state: present
+      become: true
+      when: ansible_facts['os_family'] == 'Debian'
+
+    - name: Include vars for Fedora Personal machine
+      include_vars: "machine_configurations/personal_fedora.yml"
+      when: "personal_fedora is defined and personal_fedora"
+
+    - name: Include vars for Fedora Work machine
+      include_vars: "machine_configurations/work_fedora.yml"
+      when: "work_fedora is defined and work_fedora"
+
+    - name: Include vars for Ubuntu Personal machine
+      include_vars: "machine_configurations/personal_ubuntu.yml"
+      when: "personal_ubuntu is defined and personal_ubuntu"
+
+    - name: Include vars for Ubuntu Work machine
+      include_vars: "machine_configurations/work_ubuntu.yml"
+      when: "work_ubuntu is defined and work_ubuntu"
+
+    - name: Include vars for Debian Personal machine
+      include_vars: "machine_configurations/personal_debian.yml"
+      when: "personal_debian is defined and personal_debian"
+
+    - name: Include vars for Debian Work machine
+      include_vars: "machine_configurations/work_debian.yml"
+      when: "work_debian is defined and work_debian"
+
+    - name: Include vars for Alpine Personal machine
+      include_vars: "machine_configurations/personal_alpine.yml"
+      when: "personal_alpine is defined and personal_alpine"
+
+    - name: Include vars for Alpine Work machine
+      include_vars: "machine_configurations/work_alpine.yml"
+      when: "work_alpine is defined and work_alpine"
+
+    - name: Configure the source directory for compilation
+      file:
+        path: "{{ src_dir }}"
+        state: directory
+        recurse: true
+      when: src_dir is defined
+
+    - name: Update cache for Debian-based distros
+      apt:
+        update_cache: yes
+      when: ansible_facts['os_family'] == 'Debian'
+      changed_when: false
+      become: true
+
+    - name: Update cache for Alpine
+      apk:
+        update_cache: yes
+      when: ansible_facts['distribution'] == 'Alpine'
+      changed_when: false
+      become: true
+
+    - name: Upgrade the system
+      package:
+        name: "*"
+        state: latest
+      become: true
+      when: |
+        upgrade_system is defined and upgrade_system and
+        ansible_facts['distribution'] != 'Alpine'
+
+    - name: Upgrade the system
+      community.general.apk:
+        available: yes
+        upgrade: yes
+      become: true
+      when: |
+        upgrade_system is defined and upgrade_system and
+        ansible_facts['distribution'] == 'Alpine'
+
+  roles:
+    - role: ansible-role-packages
+      when: install_packages
+
+    - role: ansible-role-aerc
+      when: install_aerc
+
+    - role: ansible-role-browserpass
+      when: install_browserpass
+
+    - role: ansible-role-sway
+      when: install_sway
+
+    - role: ansible-role-org
+      when: install_org
+
+    - role: ansible-role-tmux
+      when: install_tmux
+
+    - role: ansible-role-alacritty
+      when: install_alacritty
+
+    - role: ansible-role-fonts
+      when: install_fonts
+
+    - role: ansible-role-neovim
+      when: install_neovim
+
+    - role: ansible-role-configuration
+      when: install_configuration
+
+    - role: ansible-role-logiops
+      when: install_logiops
+
+    - role: ansible-role-terminal
+      when: install_terminal
+
+    - role: ansible-role-ranger
+      when: install_ranger
+
+  tasks:
+    - name: Upgrade the system
+      package:
+        name: "*"
+        state: latest
+      become: true
+      when: |
+        upgrade_system is defined and upgrade_system and
+        ansible_facts['distribution'] != 'Alpine'
+
+    - name: Upgrade the system
+      community.general.apk:
+        available: yes
+        upgrade: yes
+      become: true
+      when: |
+        upgrade_system is defined and upgrade_system and
+        ansible_facts['distribution'] == 'Alpine'

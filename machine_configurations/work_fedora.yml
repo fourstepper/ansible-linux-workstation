@@ -1,0 +1,100 @@
+---
+upgrade_system: false
+src_dir: "$HOME/workspace/src"
+
+dante_installed: true
+install_org: true
+install_packages: true
+install_configuration: true
+install_logiops: true
+install_terminal: true
+install_alacritty: true
+install_neovim: true
+install_tmux: true
+install_fonts: true
+install_browserpass: true
+
+install_ranger: false
+install_aerc: true
+
+# Sway
+install_sway: true
+compile_mako: true
+compile_wofi: true
+compile_wl_clipboard_x11: true
+compile_wlsusnet: true
+# !Sway
+
+# BROWSER(S) TO INSTALL
+install_firefox: true
+install_chromium: false
+
+install_chrome: false
+install_brave: false
+
+# RPMFusion config
+# Options:
+#   free: true
+#   nonfree: true
+#   both: true
+
+install_rpmfusion:
+  free: true
+
+packages:
+  - chrome-gnome-shell
+  - mpv
+  - gnome-shell-extension-pomodoro
+  - gnome-tweaks
+  - thunderbird
+  - pass
+  - pass-otp
+  - fedora-workstation-repositories
+  - dnf-plugins-core
+  - nmap
+  - neofetch
+  - rpmfusion-free-release
+  - "@Development Tools"
+  - ripgrep
+  - setroubleshoot-server
+  - smartmontools
+  - virt-manager
+  - nodejs
+  - git
+  - picocom
+  - perl-YAML
+  - obs-studio
+  - bind-utils
+  - python3
+  - python3-devel
+  - zathura
+  - eog
+  - xdg-desktop-portal
+  - xdg-desktop-portal-wlr
+  - xdg-desktop-portal-gtk
+  - keepassxc
+  - podman
+  - gnome-themes-extra
+# For dnf tab search
+  - sqlite
+# Somehow doesn't work well when installed just via pip
+  - vdirsyncer
+
+flatpaks:
+  - com.spotify.Client
+  - org.qbittorrent.qBittorrent
+  - com.slack.Slack
+  - org.gimp.GIMP
+  - com.github.Eloston.UngoogledChromium
+  - org.libreoffice.LibreOffice
+  - org.remmina.Remmina
+  - org.signal.Signal
+  - org.telegram.desktop
+  - com.github.tchx84.Flatseal
+  - org.filezillaproject.Filezilla
+  - com.obsproject.Studio
+  - im.riot.Riot
+
+pip_packages:
+  - podman-compose
+  - pynvim

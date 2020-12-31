@@ -1,0 +1,51 @@
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-packages.git
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-configuration.git
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-logiops.git
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-sway
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-alacritty
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-ranger
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-neovim
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-tmux
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-fonts
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-role-terminal
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-browserpass
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-aerc
+  scm: git
+  version: master
+
+- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-org
+  scm: git
+  version: master

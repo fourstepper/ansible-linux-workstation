@@ -1,0 +1,42 @@
+image: debian/buster
+secrets:
+  - 4629afef-1aa1-490b-b44e-828e20c2157e
+  - 50d35e03-568c-41ce-91a6-9b0228aa75cb
+sources:
+  - git@git.sr.ht:~fourstepper/ansible-linux-workstation
+packages:
+  - sudo
+  - systemd
+  - systemd-sysv
+  - build-essential
+  - wget
+  - libffi-dev
+  - libssl-dev
+  - python3-pip
+  - python3-dev
+  - python3-setuptools
+  - python3-wheel
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg-agent
+  - software-properties-common
+tasks:
+  - docker-setup: |
+      curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+      sudo add-apt-repository \
+      "deb [arch=amd64] https://download.docker.com/linux/debian \
+      $(lsb_release -cs) stable"
+      sudo apt-get update
+      sudo apt-get install docker-ce docker-ce-cli containerd.io
+  - setup-env: |
+      sudo systemctl start docker
+      sudo docker info
+      python3 --version
+      sudo pip3 install ansible molecule[docker] --progress-bar off
+      ansible --version
+      molecule --version
+  - debian-testing: |
+      cd ansible-linux-workstation
+      export ANSIBLE_VAULT_PASSWORD_FILE=/home/build/.secrets/vault_password.txt
+      sudo -E molecule test --scenario-name debian

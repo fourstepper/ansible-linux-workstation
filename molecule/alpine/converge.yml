@@ -1,0 +1,18 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+
+    - name: Configure edge repositories
+      blockinfile:
+        path: /etc/apk/repositories
+        block: |
+          http://mirror.fit.cvut.cz/alpine/edge/main
+          http://mirror.fit.cvut.cz/alpine/edge/community
+          http://mirror.fit.cvut.cz/alpine/edge/testing
+        insertbefore: BOF
+
+- import_playbook: "../../playbook.yml"
+  vars:
+    ci_test: false
+    personal_alpine: true
