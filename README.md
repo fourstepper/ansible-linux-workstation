@@ -12,6 +12,10 @@ Options for -e are:
 - personal_ubuntu=true
 - work_ubuntu=true
 
+... and so on.
+
+This is done in such a way so you can have two configurations for the same distribution for different purposes (personal and work)
+
 Where <the_targeted_pc> is the configuration file you have made for yourself (template available at machine_configurations/000-template.yml, with some more examples in the same folder)
 
 ## CI Tested
