@@ -4,7 +4,7 @@ dependency:
   options:
     role-file: molecule/requirements.yml
 driver:
-  name: docker
+  name: podman
 platforms:
   - name: instance
     image: "geerlingguy/docker-${MOLECULE_DISTRO:-fedora33}-ansible:latest"
