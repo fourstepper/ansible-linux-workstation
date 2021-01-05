@@ -1,0 +1,36 @@
+image: alpine/edge
+secrets:
+  - 4629afef-1aa1-490b-b44e-828e20c2157e
+  - 50d35e03-568c-41ce-91a6-9b0228aa75cb
+sources:
+  - git@git.sr.ht:~fourstepper/ansible-linux-workstation
+packages:
+  - sudo
+  - libffi-dev
+  - libressl-dev
+  - py3-pip
+  - python3-dev
+  - py3-setuptools
+  - py3-wheel
+  - podman
+tasks:
+  - setup-env: |
+      sudo podman info
+      python3 --version
+      sudo pip3 install ansible molecule[podman] --progress-bar off
+      ansible --version
+      molecule --version
+  - fedora-32: |
+      cd ansible-linux-workstation
+      export ANSIBLE_VAULT_PASSWORD_FILE=/home/build/.secrets/vault_password.txt
+      export MOLECULE_DISTRO=fedora32
+      sudo -E molecule test --scenario-name fedora
+  - fedora-33: |
+      cd ansible-linux-workstation
+      export ANSIBLE_VAULT_PASSWORD_FILE=/home/build/.secrets/vault_password.txt
+      export MOLECULE_DISTRO=fedora33
+      sudo -E molecule test --scenario-name fedora
+triggers:
+  - action: email
+    condition: failure
+    to: builds@robinopletal.com
