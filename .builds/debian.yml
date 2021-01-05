@@ -40,3 +40,7 @@ tasks:
       cd ansible-linux-workstation
       export ANSIBLE_VAULT_PASSWORD_FILE=/home/build/.secrets/vault_password.txt
       sudo -E molecule test --scenario-name debian
+triggers:
+  - action: email
+    condition: failure
+    to: builds@robinopletal.com

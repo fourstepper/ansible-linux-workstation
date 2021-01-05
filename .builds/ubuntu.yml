@@ -41,3 +41,7 @@ tasks:
       export ANSIBLE_VAULT_PASSWORD_FILE=/home/build/.secrets/vault_password.txt
       export MOLECULE_DISTRO=ubuntu2004
       sudo -E molecule test --scenario-name ubuntu
+triggers:
+  - action: email
+    condition: failure
+    to: builds@robinopletal.com
