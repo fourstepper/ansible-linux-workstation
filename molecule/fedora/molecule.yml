@@ -7,7 +7,7 @@ driver:
   name: podman
 platforms:
   - name: instance
-    image: "geerlingguy/docker-${MOLECULE_DISTRO:-fedora33}-ansible:latest"
+    image: "docker.io/geerlingguy/docker-${MOLECULE_DISTRO:-fedora33}-ansible:latest"
     command: ""
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
