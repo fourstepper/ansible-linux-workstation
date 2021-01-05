@@ -1,4 +1,4 @@
-image: alpine/stable
+image: alpine/edge
 secrets:
   - 4629afef-1aa1-490b-b44e-828e20c2157e
   - 50d35e03-568c-41ce-91a6-9b0228aa75cb
