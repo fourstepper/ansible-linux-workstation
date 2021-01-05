@@ -12,8 +12,8 @@
         ansible_user: "{{ whoami.stdout }}"
 
     - name: Give systemd some time to initialize
-      pause:
-        seconds: 10
+      wait_for:
+        timeout: 15
 
     - name: Install python3-apt
       package:
