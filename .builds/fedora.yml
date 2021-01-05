@@ -1,4 +1,4 @@
-image: alpine/edge
+image: fedora/latest
 secrets:
   - 4629afef-1aa1-490b-b44e-828e20c2157e
   - 50d35e03-568c-41ce-91a6-9b0228aa75cb
@@ -6,12 +6,12 @@ sources:
   - git@git.sr.ht:~fourstepper/ansible-linux-workstation
 packages:
   - sudo
-  - libffi-dev
-  - libressl-dev
-  - py3-pip
-  - python3-dev
-  - py3-setuptools
-  - py3-wheel
+  - libffi-devel
+  - openssl-devel
+  - python3-pip
+  - python3-devel
+  - python3-setuptools
+  - python3-wheel
   - podman
 tasks:
   - setup-env: |
