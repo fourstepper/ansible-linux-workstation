@@ -7,7 +7,7 @@ driver:
   name: podman
 platforms:
   - name: instance
-    image: "docker.iofourstepper/docker-${MOLECULE_DISTRO:-alpine312}-ansible"
+    image: "docker.io/fourstepper/docker-${MOLECULE_DISTRO:-alpine312}-ansible"
     command: ""
     privileged: true
     pre_build_image: true
