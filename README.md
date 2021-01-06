@@ -27,11 +27,11 @@ This is done in such a way so you can have two configurations for the same distr
 
 [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/ubuntu.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/ubuntu.yml?)
 
-- **Fedora** (latest + the previous release)
+**Fedora** (latest + the previous release)
 
 [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/fedora.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/fedora.yml?)
 
-- **Alpine** (edge + latest stable)
+**Alpine** (edge + latest stable)
 
 [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/alpine.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/alpine.yml?)
 
