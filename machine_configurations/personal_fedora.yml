@@ -44,10 +44,6 @@ install_rpmfusion:
 
 packages:
   - mpv
-  - chrome-gnome-shell
-  - gnome-shell-extension-pomodoro
-  - gnome-tweaks
-  - thunderbird
   - pass
   - pass-otp
   - fedora-workstation-repositories
@@ -73,7 +69,6 @@ packages:
   - xdg-desktop-portal
   - xdg-desktop-portal-wlr
   - xdg-desktop-portal-gtk
-  - keepassxc
   - podman
   - gnome-themes-extra
 # For dnf tab search
@@ -83,6 +78,7 @@ packages:
 
 flatpaks:
   - com.spotify.Client
+  - flatpak install flathub org.keepassxc.KeePassXC
   - org.qbittorrent.qBittorrent
   - com.slack.Slack
   - org.gimp.GIMP
@@ -94,7 +90,6 @@ flatpaks:
   - com.github.tchx84.Flatseal
   - org.filezillaproject.Filezilla
   - com.obsproject.Studio
-  - im.riot.Riot
 
 pip_packages:
   - podman-compose
