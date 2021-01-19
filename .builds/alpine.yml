@@ -20,11 +20,6 @@ tasks:
       sudo pip3 install ansible molecule[podman] --progress-bar off
       ansible --version
       molecule --version
-  - alpine-312: |
-      cd ansible-linux-workstation
-      export ANSIBLE_VAULT_PASSWORD_FILE=/home/build/.secrets/vault_password.txt
-      export MOLECULE_DISTRO=alpine312
-      sudo -E molecule test --scenario-name alpine
   - alpine-edge: |
       cd ansible-linux-workstation
       export ANSIBLE_VAULT_PASSWORD_FILE=/home/build/.secrets/vault_password.txt

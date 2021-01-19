@@ -87,4 +87,5 @@ flatpaks:
   - org.gnome.Weather
 
 pip_packages:
+  - py3-wheel
   - pynvim

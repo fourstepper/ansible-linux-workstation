@@ -31,15 +31,16 @@ This is done in such a way so you can have two configurations for the same distr
 
 [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/fedora.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/fedora.yml?)
 
-**Alpine** (edge + latest stable)
+**Alpine** (edge)
 
 [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/alpine.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/alpine.yml?)
 
 
-## Not tested in CI, but should work without a problem
+## Not tested in CI, but should work without much problems
 - PopOS 20.04
 - PopOS 20.10
 - Ubuntu 20.10
+- Alpine latest stable
 
 ### Support
 
