@@ -31,7 +31,7 @@ This is done in such a way so you can have two configurations for the same distr
 
 [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/fedora.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/fedora.yml?)
 
-**Alpine** (edge)
+**Alpine** (edge, with community and testing repositories enabled)
 
 [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/alpine.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/alpine.yml?)
 
