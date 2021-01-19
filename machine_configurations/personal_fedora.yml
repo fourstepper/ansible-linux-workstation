@@ -78,7 +78,7 @@ packages:
 
 flatpaks:
   - com.spotify.Client
-  - flatpak install flathub org.keepassxc.KeePassXC
+  - org.keepassxc.KeePassXC
   - org.qbittorrent.qBittorrent
   - com.slack.Slack
   - org.gimp.GIMP
