@@ -87,5 +87,4 @@ flatpaks:
   - org.gnome.Weather
 
 pip_packages:
-  - podman-compose
   - pynvim
