@@ -40,3 +40,7 @@ This is done in such a way so you can have two configurations for the same distr
 - PopOS 20.04
 - PopOS 20.10
 - Ubuntu 20.10
+
+### Support
+
+If you have any questions, send an e-mail to the [discuss mailing list](https://lists.sr.ht/~fourstepper/ansible-linux-workstation-discuss)
