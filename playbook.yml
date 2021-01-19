@@ -121,7 +121,7 @@
       when: install_configuration
 
     - role: ansible-role-logiops
-      when: install_logiops
+      when: install_logiops and ansible_facts['distribution'] != "Alpine"
 
     - role: ansible-role-terminal
       when: install_terminal
