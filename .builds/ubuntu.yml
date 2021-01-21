@@ -1,7 +1,9 @@
 image: fedora/latest
 secrets:
-  - 4629afef-1aa1-490b-b44e-828e20c2157e
   - 50d35e03-568c-41ce-91a6-9b0228aa75cb
+  - 4629afef-1aa1-490b-b44e-828e20c2157e
+environment:
+  CONTAINER_IMAGE: geerlingguy/docker-ubuntu2004-ansible
 sources:
   - git@git.sr.ht:~fourstepper/ansible-linux-workstation
 packages:
@@ -15,16 +17,14 @@ packages:
   - podman
 tasks:
   - setup-env: |
-      sudo podman info
-      python3 --version
       sudo pip3 install ansible molecule[podman] --progress-bar off
       ansible --version
       molecule --version
-  - ubuntu-2004: |
+  - molecule: |
       cd ansible-linux-workstation
       export ANSIBLE_VAULT_PASSWORD_FILE=/home/build/.secrets/vault_password.txt
-      export MOLECULE_DISTRO=ubuntu2004
-      sudo -E molecule test --scenario-name ubuntu
+      export IMAGE="$CONTAINER_IMAGE"
+      sudo -E molecule test
 triggers:
   - action: email
     condition: failure

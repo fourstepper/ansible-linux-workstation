@@ -1,8 +1,0 @@
----
-- name: Converge
-  hosts: all
-
-- import_playbook: "../../playbook.yml"
-  vars:
-    ci_test: false
-    personal_fedora: true

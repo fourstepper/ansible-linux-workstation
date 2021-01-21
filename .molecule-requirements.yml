@@ -1,3 +1,4 @@
+---
 - src: https://gitlab.com/ansible-opletal/ansible-workstation/ansible-role-packages.git
   scm: git
   version: master
