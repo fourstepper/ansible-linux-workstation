@@ -53,8 +53,6 @@ packages:
   - nodejs
   - git
   - picocom
-  - obs-studio
-  - wlrobs
   - python3
   - bind-tools
   - pipewire
