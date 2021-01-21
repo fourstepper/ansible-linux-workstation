@@ -29,8 +29,6 @@ See `vars/*` for inspiration and a template.
 
 
 ## Not tested in CI, but should work without much problems
-- PopOS 20.04
-- PopOS 20.10
 - Ubuntu 20.10
 - Alpine latest stable
 
