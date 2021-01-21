@@ -23,7 +23,7 @@ See `vars/*` for inspiration and a template.
 
 [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/fedora.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/fedora.yml?)
 
-**Alpine** (edge, with community and testing repositories enabled)
+**Alpine** (edge, with community repositories enabled)
 
 [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/alpine.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/alpine.yml?)
 
