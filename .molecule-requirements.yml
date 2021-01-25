@@ -15,7 +15,7 @@
   scm: git
   version: master
 
-- src: https://gitlab.com/ansible-opletal/ansible-workstation/ansible-role-alacritty.git
+- src: https://git.sr.ht/~fourstepper/ansible-role-alacritty
   scm: git
   version: master
 
@@ -39,11 +39,11 @@
   scm: git
   version: master
 
-- src: https://gitlab.com/ansible-opletal/ansible-workstation/ansible-role-browserpass.git
+- src: https://git.sr.ht/~fourstepper/ansible-role-browserpass
   scm: git
   version: master
 
-- src: https://gitlab.com/ansible-opletal/ansible-workstation/ansible-role-aerc.git
+- src: https://git.sr.ht/~fourstepper/ansible-role-aerc
   scm: git
   version: master
 
