@@ -17,7 +17,7 @@ install_packages: true
 install_logiops: true
 #
 # Sway
-compile_mako: false
+compile_mako: true
 compile_wofi: true
 compile_wl_clipboard_x11: true
 compile_wlsusnet: true
