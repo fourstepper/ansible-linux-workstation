@@ -28,10 +28,6 @@ See `vars/*` for inspiration and a template.
 [![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/alpine.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/alpine.yml?)
 
 
-## Not tested in CI, but should work without much problems
-- Ubuntu 20.10
-- Alpine latest stable
-
 ### Questions
 
 If you have any questions, send an e-mail to the [discuss mailing list](https://lists.sr.ht/~fourstepper/ansible-linux-workstation-discuss)
