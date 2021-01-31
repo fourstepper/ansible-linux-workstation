@@ -3,11 +3,11 @@
   scm: git
   version: master
 
-- src: https://gitlab.com/ansible-opletal/ansible-workstation/ansible-role-configuration.git
+- src: https://git.sr.ht/~fourstepper/ansible-role-configuration
   scm: git
   version: master
 
-- src: https://gitlab.com/ansible-opletal/ansible-workstation/ansible-role-logiops.git
+- src: https://git.sr.ht/~fourstepper/ansible-role-logiops
   scm: git
   version: master
 
@@ -31,7 +31,7 @@
   scm: git
   version: master
 
-- src: https://gitlab.com/ansible-opletal/ansible-workstation/ansible-role-fonts.git
+- src: https://git.sr.ht/~fourstepper/ansible-role-fonts
   scm: git
   version: master
 
