@@ -47,6 +47,6 @@
   scm: git
   version: master
 
-- src: https://gitlab.com/ansible-opletal/ansible-workstation/ansible-role-org.git
+- src: https://git.sr.ht/~fourstepper/ansible-role-org
   scm: git
   version: master
