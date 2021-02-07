@@ -31,6 +31,8 @@ install_chrome: false
 install_brave: false
 
 packages:
+  - network-manager-openvpn
+  - network-manager-openvpn-gnome
   - libnotify-bin
   - nmap
   - mpv
