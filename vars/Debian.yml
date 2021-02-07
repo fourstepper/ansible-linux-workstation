@@ -17,7 +17,7 @@ install_packages: true
 install_logiops: true
 #
 # Sway
-compile_mako: false
+compile_mako: true
 compile_wofi: true
 compile_wl_clipboard_x11: true
 compile_wlsusnet: true
@@ -25,20 +25,15 @@ compile_wlsusnet: true
 
 # BROWSER(S) TO INSTALL
 install_firefox: true
-install_chromium: true
+install_chromium: false
 
 install_chrome: false
 install_brave: false
 
-# RPMFusion config
-# Options:
-#   free: true
-#   nonfree: true
-#   both: true
-install_rpmfusion:
-  both: true
-
 packages:
+  - libnotify-bin
+  - nmap
+  - mpv
   - pass
   - pass-extension-otp
   - nmap
@@ -52,8 +47,14 @@ packages:
   - eog
   - gnome-keyring
   - gnome-themes-extra
+  - weechat
+  - xdg-desktop-portal
+  - xdg-desktop-portal-wlr
+  - xdg-desktop-portal-gtk
+  - htop
 
 flatpaks:
+  - org.telegram.desktop
   - org.chromium.Chromium
   - com.spotify.Client
   - org.videolan.VLC
