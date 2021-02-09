@@ -1,4 +1,4 @@
-# ansible-fedora-workstation
+# ansible-linux-workstation
 
 ansible meta-playbook for bootstrapping and managing workstation machines
 
