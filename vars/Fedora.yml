@@ -14,6 +14,7 @@ install_tmux: true
 install_fonts: true
 install_browserpass: true
 
+install_ranger: false
 install_aerc: true
 
 # Sway

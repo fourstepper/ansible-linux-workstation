@@ -11,6 +11,7 @@ install_terminal: true
 install_alacritty: true
 install_neovim: true
 install_tmux: true
+install_ranger: true
 install_fonts: true
 
 install_logiops: false
