@@ -35,7 +35,7 @@
   scm: git
   version: master
 
-- src: https://gitlab.com/ansible-opletal/ansible-role-terminal.git
+- src: https://git.sr.ht/~fourstepper/ansible-role-terminal
   scm: git
   version: master
 
