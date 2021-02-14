@@ -18,7 +18,7 @@
   scm: git
   version: master
 
-- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-ranger
+- src: git@git.sr.ht:~fourstepper/ansible-role-ranger
   scm: git
   version: master
 
