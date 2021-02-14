@@ -27,7 +27,7 @@
   scm: git
   version: master
 
-- src: https://gitlab.com/ansible-opletal/ansible-workstation/ansible-role-tmux.git
+- src: https://git.sr.ht/~fourstepper/ansible-role-tmux
   scm: git
   version: master
 
