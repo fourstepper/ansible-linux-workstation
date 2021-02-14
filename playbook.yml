@@ -97,9 +97,6 @@
     - role: ansible-role-terminal
       when: install_terminal
 
-    - role: ansible-role-ranger
-      when: install_ranger
-
   tasks:
     - name: Upgrade the system
       package:

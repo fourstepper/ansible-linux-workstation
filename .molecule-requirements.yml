@@ -19,10 +19,6 @@
   scm: git
   version: master
 
-- src: https://gitlab.com/ansible-opletal/ansible-workstation/ansible-role-ranger.git
-  scm: git
-  version: master
-
 - src: https://git.sr.ht/~fourstepper/ansible-role-neovim
   scm: git
   version: master
