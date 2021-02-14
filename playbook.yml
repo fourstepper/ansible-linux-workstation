@@ -94,7 +94,7 @@
     - role: ansible-role-logiops
       when: install_logiops and ansible_facts['distribution'] != "Alpine"
 
-    - role: ansible-role-terminal
+    - role: ansible-role-shell
       when: install_terminal
 
     - role: ansible-role-ranger
