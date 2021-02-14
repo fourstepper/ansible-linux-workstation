@@ -1,4 +1,4 @@
-- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-packages.git
+- src: git@git.sr.ht:~fourstepper/ansible-role-packages
   scm: git
   version: master
 
