@@ -10,7 +10,7 @@
   scm: git
   version: master
 
-- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-sway
+- src: git@git.sr.ht:~fourstepper/ansible-role-sway
   scm: git
   version: master
 
@@ -22,7 +22,7 @@
   scm: git
   version: master
 
-- src: git@gitlab.com:ansible-opletal/ansible-workstation/ansible-role-neovim
+- src: git@git.sr.ht:~fourstepper/ansible-role-neovim
   scm: git
   version: master
 

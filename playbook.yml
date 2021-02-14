@@ -5,7 +5,7 @@
     - name: Include the distribution vars
       include_vars: "vars/{{ ansible_facts['distribution'] }}.yml"
 
-    - name: Run whoami without to get the user name
+    - name: Run whoami to get the user name
       command: whoami
       changed_when: false
       register: whoami
