@@ -34,9 +34,6 @@ smart_borders on
 # Set terminal
 set $terminal /usr/bin/alacritty
 
-# Wallpaper
-#set $wallpaper ~/Documents/wallpapers/robinwall02-notext.png
-
 # Menu used for launching apps
 set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec -
 
@@ -44,7 +41,7 @@ set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec -
 include ~/.config/sway/themes/gruvbox
 
 # Swalock
-set $swaylock swaylock -f -c 282828
+set $swaylock swaylock -f -c 000000
 
 set $mxmaster3 1133:16514:Logitech_MX_Master_3
 
