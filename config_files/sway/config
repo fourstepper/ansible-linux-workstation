@@ -80,8 +80,8 @@ default_floating_border none
 # Clipman history
 #bindsym $mod+v exec clipman pick --tool wofi -T'-i'
 
-# Start wlsunset (Redshift, basically)
-exec wlsunset -t 3800
+# Start wlsunset (around Prague) (Redshift, basically)
+exec wlsunset -l 49.9 -L 14.6
 
 # Mako start
 exec mako
