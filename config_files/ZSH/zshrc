@@ -70,6 +70,7 @@ alias nautilus='nautilus -w $(pwd)'
 alias worknew='khal new -a work'
 alias ownnew='khal new -a personal'
 alias randompass='< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-32};echo;'
+alias aerc='mkdir -p ~/.log/aerc && aerc > ~/.log/aerc/aerc.log'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
