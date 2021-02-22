@@ -60,13 +60,9 @@ flatpaks:
   - org.telegram.desktop
   - org.chromium.Chromium
   - com.spotify.Client
-  - org.videolan.VLC
-  - com.bitwarden.desktop
   - com.getpostman.Postman
   - com.slack.Slack
   - org.gimp.GIMP
-  - org.gnome.Extensions
-  - org.gnome.seahorse.Application
   - org.keepassxc.KeePassXC
   - org.libreoffice.LibreOffice
   - org.remmina.Remmina
@@ -76,7 +72,6 @@ flatpaks:
   - org.gnome.Maps
   - im.riot.Riot
   - com.obsproject.Studio
-  - nl.hjdskes.gcolor3
   - org.gnome.Weather
 
 pip_packages:

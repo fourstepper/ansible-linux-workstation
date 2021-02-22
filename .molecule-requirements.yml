@@ -50,3 +50,7 @@
 - src: https://git.sr.ht/~fourstepper/ansible-role-org
   scm: git
   version: master
+
+- src: https://git.sr.ht/~fourstepper/ansible-role-weechat
+  scm: git
+  version: master
