@@ -1,5 +1,5 @@
 ---
-upgrade_system: false
+upgrade: false
 src_dir: "$HOME/workspace/src"
 
 install_aerc: true
@@ -15,6 +15,7 @@ install_fonts: true
 install_alacritty: true
 install_packages: true
 install_logiops: true
+install_weechat: true
 #
 # Sway
 compile_mako: true

@@ -1,5 +1,5 @@
 ---
-upgrade_system: false
+upgrade: false
 src_dir: "$HOME/workspace/src"
 
 dante_installed: true
@@ -13,6 +13,7 @@ install_neovim: true
 install_tmux: true
 install_fonts: true
 install_browserpass: true
+install_weechat: true
 
 install_ranger: false
 install_aerc: true

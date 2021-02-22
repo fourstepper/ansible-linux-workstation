@@ -48,7 +48,7 @@
         state: latest
       become: true
       when: |
-        upgrade_system is defined and upgrade_system and
+        upgrade is defined and upgrade and
         ansible_facts['distribution'] != 'Alpine'
 
     - name: Upgrade the system
@@ -57,48 +57,51 @@
         upgrade: yes
       become: true
       when: |
-        upgrade_system is defined and upgrade_system and
+        upgrade is defined and upgrade and
         ansible_facts['distribution'] == 'Alpine'
 
   roles:
     - role: ansible-role-packages
-      when: install_packages
+      when: install_packages|default(false)
 
     - role: ansible-role-aerc
-      when: install_aerc
+      when: install_aerc|default(false)
 
     - role: ansible-role-browserpass
-      when: install_browserpass
+      when: install_browserpass|default(false)
 
     - role: ansible-role-sway
-      when: install_sway
+      when: install_sway|default(false)
 
     - role: ansible-role-org
-      when: install_org
+      when: install_org|default(false)
 
     - role: ansible-role-tmux
-      when: install_tmux
+      when: install_tmux|default(false)
 
     - role: ansible-role-alacritty
-      when: install_alacritty
+      when: install_alacritty|default(false)
 
     - role: ansible-role-fonts
-      when: install_fonts
+      when: install_fonts|default(false)
 
     - role: ansible-role-neovim
-      when: install_neovim
+      when: install_neovim|default(false)
 
     - role: ansible-role-configuration
-      when: install_configuration
+      when: install_configuration|default(false)
 
     - role: ansible-role-logiops
-      when: install_logiops and ansible_facts['distribution'] != "Alpine"
+      when: install_logiops|default(false) and ansible_facts['distribution'] != "Alpine"
 
     - role: ansible-role-shell
-      when: install_terminal
+      when: install_terminal|default(false)
 
     - role: ansible-role-ranger
-      when: install_ranger
+      when: install_ranger|default(false)
+
+    - role: ansible-role-weechat
+      when: install_weechat|default(false)
 
   tasks:
     - name: Upgrade the system
@@ -107,7 +110,7 @@
         state: latest
       become: true
       when: |
-        upgrade_system is defined and upgrade_system and
+        upgrade is defined and upgrade and
         ansible_facts['distribution'] != 'Alpine'
 
     - name: Upgrade the system
@@ -116,5 +119,5 @@
         upgrade: yes
       become: true
       when: |
-        upgrade_system is defined and upgrade_system and
+        upgrade is defined and upgrade and
         ansible_facts['distribution'] == 'Alpine'
