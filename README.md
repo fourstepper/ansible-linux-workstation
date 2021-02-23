@@ -2,6 +2,8 @@
 
 ansible meta-playbook for bootstrapping and managing workstation machines
 
+Check out the various roles used by this playbook [here](https://sr.ht/~fourstepper/ansible-linux-workstation/sources)
+
 ## Usage
 
 `ansible-playbook -i inventory --diff -K playbook.yml --vault-password-file=<your_password_file>`
