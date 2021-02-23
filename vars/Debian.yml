@@ -25,7 +25,7 @@ compile_wlsusnet: true
 # !Sway
 
 # BROWSER(S) TO INSTALL
-install_firefox: true
+install_firefox: false # firefox from mozilla website
 install_chromium: false
 
 install_chrome: false
