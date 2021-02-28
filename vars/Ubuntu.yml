@@ -51,8 +51,9 @@ packages:
   - picocom
   - zathura
   - eog
-  - gnome-keyring
   - gnome-themes-extra
+  # for compiled Python to have the sqlite3 headers
+  - libsqlite3-dev
 
 flatpaks:
   - com.spotify.Client

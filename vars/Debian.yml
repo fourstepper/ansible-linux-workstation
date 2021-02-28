@@ -48,13 +48,14 @@ packages:
   - picocom
   - zathura
   - eog
-  - gnome-keyring
   - gnome-themes-extra
   - weechat
   - xdg-desktop-portal
   - xdg-desktop-portal-wlr
   - xdg-desktop-portal-gtk
   - htop
+  # for compiled Python to have the sqlite3 headers
+  - libsqlite3-dev
 
 flatpaks:
   - org.telegram.desktop
