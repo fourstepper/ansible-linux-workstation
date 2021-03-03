@@ -35,6 +35,7 @@ packages:
   - network-manager-openvpn
   - network-manager-openvpn-gnome
   - libnotify-bin
+  - apt-file
   - nmap
   - mpv
   - pass
