@@ -60,7 +60,7 @@ packages:
 
 flatpaks:
   - org.telegram.desktop
-  - org.chromium.Chromium
+  - com.github.Eloston.UngoogledChromium
   - com.spotify.Client
   - com.getpostman.Postman
   - com.slack.Slack
@@ -69,12 +69,8 @@ flatpaks:
   - org.libreoffice.LibreOffice
   - org.remmina.Remmina
   - org.signal.Signal
-  - com.github.tchx84.Flatseal
   - org.filezillaproject.Filezilla
-  - org.gnome.Maps
-  - im.riot.Riot
   - com.obsproject.Studio
-  - org.gnome.Weather
 
 pip_packages:
   - podman-compose

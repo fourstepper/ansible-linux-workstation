@@ -78,6 +78,7 @@ packages:
   - vdirsyncer
 
 flatpaks:
+  - org.telegram.desktop
   - com.spotify.Client
   - org.keepassxc.KeePassXC
   - org.qbittorrent.qBittorrent
