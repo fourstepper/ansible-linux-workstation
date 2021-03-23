@@ -27,9 +27,6 @@ export EDITOR="nvim"
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*"'
 export FZF_DEFAULT_OPTS='--bind J:down,K:up --ansi'
 
-# Export kubeconfig
-export KUBECONFIG=~/.kube/config
-
 # Rust PATH
 export PATH=$HOME/.cargo/bin/:$PATH
 
