@@ -18,6 +18,9 @@ fi
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
+# source kubectl completion
+echo "source <(kubectl completion bash)"
+
 export EDITOR="nvim"
 
 # fzf command (primarily for neovim)
