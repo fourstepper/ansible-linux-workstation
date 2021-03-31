@@ -184,9 +184,6 @@ set secure
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 
-" Set a different indentation character
-let g:indentLine_char = '⦙'
-
 " Make brackets rainbowy
 let g:rainbow_active = 1
 
