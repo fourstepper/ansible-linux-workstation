@@ -29,7 +29,7 @@ install_firefox: false # firefox from mozilla website
 install_chromium: false
 
 install_chrome: false
-install_brave: false
+install_brave: true
 
 packages:
   - network-manager-openvpn
