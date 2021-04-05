@@ -165,6 +165,9 @@ colorscheme gruvbox
 " ##################
 " coc.vim configuration
 
+" Automatically install these extensions
+let g:coc_global_extensions = ['coc-sh', 'coc-yaml', 'coc-pyls', 'coc-json', 'coc-go', 'coc-html', 'coc-css']
+
 " TextEdit might fail if hidden is not set.
 set hidden
 
