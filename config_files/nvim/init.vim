@@ -1,47 +1,5 @@
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
-if (empty($TMUX))
-  if (has("nvim"))
-    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-
-" Set proper color in Vim
-set termguicolors
-
-" Set no highlight after search ends
-set nohlsearch
-
-" Check for eight line lines
-set colorcolumn=80
-
-" Use powerline fonts for the git icons to show up
-let g:airline_powerline_fonts = 1
-
-" turn hybrid line numbers on
-set number relativenumber
-set nu rnu
-
-" Custom command for new file in the same directory
-command! -nargs=+ NewFile :e %:h/<args>
-
-" Remove trailing whitespaces on save
-autocmd BufWritePre * :%s/\s\+$//e
-
-" Vim Plugins Directory call
-
-call plug#begin('~/.vim/plugged')
-
 " -------------
-" Vim Plugs go here
+call plug#begin('~/.vim/plugged')
 
     "Bracket surround
         Plug 'tpope/vim-surround'
@@ -76,86 +34,32 @@ call plug#begin('~/.vim/plugged')
     " Vim + Tmux = <3
         Plug 'christoomey/vim-tmux-navigator'
 
-" Vim Plugs end here'
-
 call plug#end()
-
 " -------------
 
-" set Vim-specific sequences for RGB colors
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" Set proper color in Vim
+set termguicolors
 
-" Set ansible-vault password
-    " let $ANSIBLE_VAULT_PASSWORD_FILE="~/.ansible/vault_pass.txt"
+" Set no highlight after search ends
+set nohlsearch
 
-" ALL OF MY KEYBINDINGS GO HERE:
+" Check for eight line lines
+set colorcolumn=80
 
-" ----------------------
+" Use powerline fonts for the git icons to show up
+let g:airline_powerline_fonts = 1
 
-" Leader = <space>
-        let mapleader = "\<Space>"
+" turn hybrid line numbers on
+set number relativenumber
+set nu rnu
 
-    " Make new split below and switch over to it
-        nnoremap <leader>w <C-w><C-s><C-w>j
-    " Make new split to the right and switch over to it
-        nnoremap <leader>v <C-w><C-v><C-w>l
-    " Navigate vim buffers easier
-        nnoremap <M-J> <C-W><C-J>
-        nnoremap <M-K> <C-W><C-K>
-        nnoremap <M-L> <C-W><C-L>
-        nnoremap <M-H> <C-W><C-H>
-    " Search for files with fzf
-        nnoremap <C-p> :Files<CR>
-    " Search for files recursively with fzf
-        nnoremap <C-g> :Rg<CR>
-    " Ansible-vault-inline to ,v
-        nmap <leader>ve :AnsibleVault <CR>
-        nmap <leader>vd :AnsibleUnvault <CR>
+" Custom command for new file in the same directory
+command! -nargs=+ NewFile :e %:h/<args>
 
-    " COC STUFF!
-
-    " Go to definition
-        nmap <silent> gd <Plug>(coc-definition)
-    " Find references
-        nmap <silent> gr <Plug>(coc-references)
-
-    " Use K to show documentation in preview window.
-        nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-    " Use `[g` and `]g` to navigate diagnostics
-        nmap <silent> [g <Plug>(coc-diagnostic-prev)
-        nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-    " Merge problems resolution
-        nmap <leader>gj :diffget //3<CR>
-        nmap <leader>gf :diffget //2<CR>
-    "
-    " Mappings for switching between tmux and vim panes seamlessly
-    let g:tmux_navigator_no_mappings = 1
-    nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
-    nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
-    nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
-    nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
-    nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
-
-
-    "Functions for coc vim
-
-" ----------------------
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" VARIOUS
+" Remove trailing whitespaces on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 "Syntax highlighting
-
 syntax on
 
 " Disable compatibility with Vi
@@ -164,14 +68,13 @@ syntax on
     set autoindent
 " Incremental search
     set incsearch
-" Case handling while searching
+" Case handling while searching (only search case-sensitive
+" if case-sensitivity is used)
     set ignorecase
     set smartcase
-" Set gdefault as default (:s/foo/bar/ = :s/foo/bar/g)
-    set gdefault
 
-" (Not only) Python tab stuff (shorter tab, some changes regarding the behaviour of indentation per filetype)
-
+" (Not only) Python tab stuff (shorter tab, some changes
+" regarding the behaviour of indentation per filetype)
 set tabstop=8
 set expandtab
 set shiftwidth=4
@@ -193,21 +96,11 @@ set path+=**
 " Display all matching files during the auto completion process
 set wildmenu
 
-" What have we just enabled?
-" > Hit tab to :find by partial match
-" > Use * to make it fuzzy search
-
-" :b also let's you open a buffer by specifying it's substring
-
-
 " Show line numbers
 set number
 
 " Leader key show command
 set showcmd
-
-" !!!OSX ONLY!!! Use '' in Visual mode to copy to clipboard on OSX
-vmap '' :w !pbcopy<CR><CR>
 
 " Undo history!
 set undofile                " Save undo's after file closes
@@ -220,9 +113,56 @@ set background=dark    " Setting dark mode
 colorscheme gruvbox
 "let g:gruvbox_contrast_dark = 'hard'
 
+" set Vim-specific sequences for RGB colors
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+" Set ansible-vault password (just a reference)
+    " let $ANSIBLE_VAULT_PASSWORD_FILE="~/.ansible/vault_pass.txt"
+
+" ALL OF MY KEYBINDINGS GO HERE:
+" ----------------------
+" Leader = <space>
+        let mapleader = "\<Space>"
+
+    " Make new split below and switch over to it
+        nnoremap <leader>w <C-w><C-s><C-w>j
+    " Make new split to the right and switch over to it
+        nnoremap <leader>v <C-w><C-v><C-w>l
+    " Navigate vim buffers easier
+        nnoremap <M-J> <C-W><C-J>
+        nnoremap <M-K> <C-W><C-K>
+        nnoremap <M-L> <C-W><C-L>
+        nnoremap <M-H> <C-W><C-H>
+    " Search for files with fzf
+        nnoremap <C-p> :Files<CR>
+    " Search for files recursively with fzf
+        nnoremap <C-g> :Rg<CR>
+    " Ansible-vault-inline to ,v
+        nmap <leader>ve :AnsibleVault <CR>
+        nmap <leader>vd :AnsibleUnvault <CR>
+    " Git - Merge problems resolution
+        nmap <leader>gj :diffget //3<CR>
+        nmap <leader>gf :diffget //2<CR>
+    " Go to definition
+        nmap <silent> gd <Plug>(coc-definition)
+    " Find references
+        nmap <silent> gr <Plug>(coc-references)
+    " Use K to show documentation in preview window.
+        nnoremap <silent> K :call <SID>show_documentation()<CR>
+    " Use `[g` and `]g` to navigate diagnostics
+        nmap <silent> [g <Plug>(coc-diagnostic-prev)
+        nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+    " Mappings for switching between tmux and vim panes seamlessly
+    let g:tmux_navigator_no_mappings = 1
+    nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
+    nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
+    nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
+    nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
+    nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
 
 " ##################
-"
 " coc.vim configuration
 
 " TextEdit might fail if hidden is not set.
