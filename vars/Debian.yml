@@ -32,6 +32,7 @@ install_chrome: false
 install_brave: true
 
 packages:
+  - pulseaudio-utils
   - network-manager-openvpn
   - network-manager-openvpn-gnome
   - libnotify-bin
