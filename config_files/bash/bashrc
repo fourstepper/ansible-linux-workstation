@@ -18,6 +18,9 @@ fi
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
+# ve <virtualenv name> activates
+ve() { source $1/bin/activate; }
+
 # source kubectl completion
 source <(kubectl completion bash)
 
