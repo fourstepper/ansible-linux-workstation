@@ -85,7 +85,9 @@ set secure
 
 " Yaml file indentation rules
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Typescript (pure tabs, 8 chars width)
+autocmd FileType typescript setlocal ts=8 sw=8 noexpandtab
 
 " Make brackets rainbowy
 let g:rainbow_active = 1
