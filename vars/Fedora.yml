@@ -6,7 +6,7 @@ dante_installed: true
 install_org: true
 install_packages: true
 install_configuration: true
-install_logiops: true
+install_logiops: false
 install_terminal: true
 install_alacritty: true
 install_neovim: true
@@ -27,12 +27,12 @@ compile_wlsusnet: true
 # !Sway
 
 # BROWSER(S) TO INSTALL
-install_firefox: true
+install_firefox: false
 # install chromium instead of Brave browser on Debian
-install_chromium: false
+install_chromium: true
 
 install_chrome: false
-install_brave: true
+install_brave: false
 
 # RPMFusion config
 # Options:
@@ -45,6 +45,15 @@ install_rpmfusion:
   nonfree: false
 
 packages:
+  - NetworkManager-fortisslvpn
+  - NetworkManager-fortisslvpn-gnome
+  - NetworkManager-openvpn
+  - NetworkManager-openvpn-gnome
+  - light
+  - playerctl
+  - libappindicator
+  - network-manager-applet
+  - pulseaudio-utils
   - mpv
   - pass
   - pass-otp
@@ -81,11 +90,9 @@ packages:
 flatpaks:
   - org.telegram.desktop
   - com.spotify.Client
-  - org.keepassxc.KeePassXC
   - org.qbittorrent.qBittorrent
   - com.slack.Slack
   - org.gimp.GIMP
-  - com.github.Eloston.UngoogledChromium
   - org.libreoffice.LibreOffice
   - org.remmina.Remmina
   - org.signal.Signal
@@ -94,5 +101,4 @@ flatpaks:
   - com.obsproject.Studio
 
 pip_packages:
-  - podman-compose
   - pynvim
