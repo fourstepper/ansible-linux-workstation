@@ -315,6 +315,9 @@ for_window [class="vlc"] inhibit_idle fullscreen
 
 for_window [class="VirtualBox Manager"] shortcuts_inhibitor
 
+# https://github.com/emersion/xdg-desktop-portal-wlr/wiki/systemd-user-services,-pam,-and-environment-variables#tldr
+exec "systemctl --user import-environment"
+
 # GTK Settings:
 set $gnome-schema org.gnome.desktop.interface
 

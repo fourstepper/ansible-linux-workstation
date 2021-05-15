@@ -6,7 +6,7 @@ dante_installed: true
 install_org: true
 install_packages: true
 install_configuration: true
-install_logiops: false
+install_logiops: true
 install_terminal: true
 install_alacritty: true
 install_neovim: true
