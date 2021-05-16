@@ -3,6 +3,7 @@ upgrade: false
 src_dir: "$HOME/workspace/src"
 
 dante_installed: true
+install_docker: true
 install_org: true
 install_packages: true
 install_configuration: true
@@ -81,7 +82,9 @@ packages:
   - xdg-desktop-portal-wlr
   - xdg-desktop-portal-gtk
   - podman
+  - docker-compose
   - gnome-themes-extra
+  - kubernetes-client
 # For dnf tab search
   - sqlite
 # Somehow doesn't work well when installed just via pip

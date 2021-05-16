@@ -54,3 +54,5 @@
 - src: https://git.sr.ht/~fourstepper/ansible-role-weechat
   scm: git
   version: master
+
+- src: geerlingguy.docker

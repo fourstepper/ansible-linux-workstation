@@ -60,6 +60,27 @@
         upgrade is defined and upgrade and
         ansible_facts['distribution'] == 'Alpine'
 
+    - name: Create the Docker daemon directory structure
+      file:
+        path: /etc/docker
+        state: directory
+      become: true
+      when: install_docker|default(false)
+
+    - name: Template the docker daemon.json file
+      template:
+        src: templates/daemon.json.j2
+        dest: /etc/docker/daemon.json
+      become: true
+      when: install_docker|default(false)
+
+    - name: Make sure the Docker daemon directory structure is deleted
+      file:
+        path: /etc/docker
+        state: directory
+      become: true
+      when: not install_docker|default(false)
+
   roles:
     - role: ansible-role-packages
       when: install_packages|default(false)
@@ -103,7 +124,19 @@
     - role: ansible-role-weechat
       when: install_weechat|default(false)
 
+    - role: geerlingguy.docker
+      become: true
+      when: install_docker|default(false)
+
   tasks:
+    - name: Add the current user to the Docker group
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: true
+      become: true
+      when: install_docker|default(false)
+
     - name: Upgrade the system
       package:
         name: "*"
