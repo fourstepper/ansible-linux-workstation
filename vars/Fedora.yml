@@ -30,10 +30,10 @@ compile_wlsusnet: true
 # BROWSER(S) TO INSTALL
 install_firefox: false
 # install chromium instead of Brave browser on Debian
-install_chromium: true
+install_chromium: false
 
 install_chrome: false
-install_brave: false
+install_brave: true
 
 # RPMFusion config
 # Options:
