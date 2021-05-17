@@ -1,58 +1,58 @@
 ---
-- src: git@git.sr.ht:~fourstepper/ansible-role-packages
+- src: git@github.com:fourstepper/ansible-role-packages
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-configuration
+- src: git@github.com:fourstepper/ansible-role-configuration
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-logiops
+- src: git@github.com:fourstepper/ansible-role-logiops
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-sway
+- src: git@github.com:fourstepper/ansible-role-sway
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-alacritty
+- src: git@github.com:fourstepper/ansible-role-alacritty
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-ranger
+- src: git@github.com:fourstepper/ansible-role-ranger
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-neovim
+- src: git@github.com:fourstepper/ansible-role-neovim
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-tmux
+- src: git@github.com:fourstepper/ansible-role-tmux
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-fonts
+- src: git@github.com:fourstepper/ansible-role-fonts
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-shell
+- src: git@github.com:fourstepper/ansible-role-shell
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-browserpass
+- src: git@github.com:fourstepper/ansible-role-browserpass
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-aerc
+- src: git@github.com:fourstepper/ansible-role-aerc
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-org
+- src: git@github.com:fourstepper/ansible-role-org
   scm: git
-  version: master
+  version: main
 
-- src: git@git.sr.ht:~fourstepper/ansible-role-weechat
+- src: git@github.com:fourstepper/ansible-role-weechat
   scm: git
-  version: master
+  version: main
 
 - src: geerlingguy.docker
