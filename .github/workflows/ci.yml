@@ -48,6 +48,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: 'ansible-linux-workstation'
+          submodules: recursive
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
