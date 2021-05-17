@@ -92,7 +92,7 @@ exec nm-applet --indicator
 bindsym --release $mod+s exec grim -g "$(slurp)" - | wl-copy
 
 # Copy screenshot of an area to ~/Pictures/screenshots/
-bindsym --release $mod+Shift+s exec grim -g "$(slurp)" ~/Pictures/screenshots/$(date +%s).png
+bindsym --release $mod+Shift+s exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%s).png
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
