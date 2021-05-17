@@ -1,5 +1,7 @@
 # ansible-linux-workstation
 
+[![CI](https://github.com/fourstepper/ansible-linux-workstation/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/fourstepper/ansible-linux-workstation/actions/workflows/ci.yml)
+
 ansible meta-playbook for bootstrapping and managing workstation machines
 
 Check out the various roles used by this playbook [here](https://sr.ht/~fourstepper/ansible-linux-workstation/sources)
@@ -11,19 +13,6 @@ Check out the various roles used by this playbook [here](https://sr.ht/~fourstep
 ## Vars
 
 See `vars/*` for inspiration and a template.
-
-## CI Tested
-**Debian** (testing)
-
-[![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/debian.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/debian.yml?)
-
-**Ubuntu** (latest stable)
-
-[![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/ubuntu.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/ubuntu.yml?)
-
-**Fedora** (latest release)
-
-[![builds.sr.ht status](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/fedora.yml.svg)](https://builds.sr.ht/~fourstepper/ansible-linux-workstation/commits/fedora.yml?)
 
 ### Questions
 
