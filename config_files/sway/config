@@ -121,6 +121,10 @@ bindsym $mod+m exec makoctl set invisible=1
 
 bindsym $mod+n exec makoctl set invisible=0
 
+# New browser window
+set $browser /usr/bin/brave-browser
+bindsym $mod+b exec $browser --enable-features=UseOzonePlatform --ozone-platform=wayland --force-dark-mode
+
 # Set player to spotify
 set $player spotify
 
