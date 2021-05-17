@@ -16,4 +16,4 @@
 
 - import_playbook: "playbook.yml"
   vars:
-    ci_test: false
+    ci_test: true
