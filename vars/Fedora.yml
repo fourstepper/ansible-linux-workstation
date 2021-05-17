@@ -85,9 +85,9 @@ packages:
   - docker-compose
   - gnome-themes-extra
   - kubernetes-client
-# For dnf tab search
+  # For dnf tab search
   - sqlite
-# Somehow doesn't work well when installed just via pip
+  # Somehow doesn't work well when installed just via pip
   - vdirsyncer
 
 flatpaks:

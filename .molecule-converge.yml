@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: Wait for systemd to complete initialization. # noqa 303
+    - name: Wait for systemd to complete initialization.
       command: systemctl is-system-running
       register: systemctl_status
       until: >

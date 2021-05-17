@@ -18,25 +18,25 @@ colors:
 
   # Normal colors
   normal:
-    black:   '#282828'
-    red:     '#aa0000'
-    green:   '#00aa00'
-    yellow:  '#f5dd2f'
-    blue:    '#2693df'
+    black: '#282828'
+    red: '#aa0000'
+    green: '#00aa00'
+    yellow: '#f5dd2f'
+    blue: '#2693df'
     magenta: '#aa00aa'
-    cyan:    '#00aaaa'
-    white:   '#aaaaaa'
+    cyan: '#00aaaa'
+    white: '#aaaaaa'
 
   # Bright colors
   bright:
-    black:   '#282828'
-    red:     '#aa0000'
-    green:   '#00aa00'
-    yellow:  '#f5dd2f'
-    blue:    '#2693df'
+    black: '#282828'
+    red: '#aa0000'
+    green: '#00aa00'
+    yellow: '#f5dd2f'
+    blue: '#2693df'
     magenta: '#aa00aa'
-    cyan:    '#00aaaa'
-    white:   '#aaaaaa'
+    cyan: '#00aaaa'
+    white: '#aaaaaa'
 
 # Font configuration
 font:
@@ -44,13 +44,13 @@ font:
   size: 10
   # The normal (roman) font face to use.
   normal:
-      family: "Dejavu Sans Mono"
+    family: "Dejavu Sans Mono"
 
   bold:
-      family: "Dejavu Sans Mono"
+    family: "Dejavu Sans Mono"
 
   italic:
-      family: "Dejavu Sans Mono"
+    family: "Dejavu Sans Mono"
 
 
 key_bindings:

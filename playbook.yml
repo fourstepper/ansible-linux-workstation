@@ -30,15 +30,8 @@
 
     - name: Update cache for Debian-based distros
       apt:
-        update_cache: yes
+        update_cache: true
       when: ansible_facts['os_family'] == 'Debian'
-      changed_when: false
-      become: true
-
-    - name: Update cache for Alpine
-      apk:
-        update_cache: yes
-      when: ansible_facts['distribution'] == 'Alpine'
       changed_when: false
       become: true
 
@@ -47,18 +40,7 @@
         name: "*"
         state: latest
       become: true
-      when: |
-        upgrade is defined and upgrade and
-        ansible_facts['distribution'] != 'Alpine'
-
-    - name: Upgrade the system
-      community.general.apk:
-        available: yes
-        upgrade: yes
-      become: true
-      when: |
-        upgrade is defined and upgrade and
-        ansible_facts['distribution'] == 'Alpine'
+      when: upgrade is defined and upgrade
 
     - name: Create the Docker daemon directory structure
       file:
@@ -113,7 +95,7 @@
       when: install_configuration|default(false)
 
     - role: ansible-role-logiops
-      when: install_logiops|default(false) and ansible_facts['distribution'] != "Alpine"
+      when: install_logiops|default(false)
 
     - role: ansible-role-shell
       when: install_terminal|default(false)
@@ -142,15 +124,4 @@
         name: "*"
         state: latest
       become: true
-      when: |
-        upgrade is defined and upgrade and
-        ansible_facts['distribution'] != 'Alpine'
-
-    - name: Upgrade the system
-      community.general.apk:
-        available: yes
-        upgrade: yes
-      become: true
-      when: |
-        upgrade is defined and upgrade and
-        ansible_facts['distribution'] == 'Alpine'
+      when: upgrade is defined and upgrade
