@@ -293,7 +293,7 @@ bindsym $mod+Shift+Control+x exec $swaylock && systemctl suspend
 # Swayidle
 exec swayidle -w \
     timeout 600 '$swaylock' \
-    timeout 601 'swaymsg "output * dpms off"' \
+    timeout 610 'swaymsg "output * dpms off"' \
         resume 'swaymsg "output * dpms on"' \
     before-sleep '$swaylock'
 
