@@ -92,7 +92,6 @@ packages:
 flatpaks:
   - org.telegram.desktop
   - com.spotify.Client
-  - org.qbittorrent.qBittorrent
   - com.slack.Slack
   - org.gimp.GIMP
   - org.libreoffice.LibreOffice
