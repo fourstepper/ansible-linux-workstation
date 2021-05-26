@@ -90,6 +90,7 @@ packages:
   - vdirsyncer
 
 flatpaks:
+  - org.gnome.Geary
   - org.telegram.desktop
   - com.spotify.Client
   - com.slack.Slack
