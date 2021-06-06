@@ -2,6 +2,9 @@ include ~/.config/sway/themes/gruvbox
 
 include ~/.config/sway/barconfig
 
+# kanshi (dynamic display management)
+exec_always pkill kanshi; exec kanshi
+
 bar {
         # Says padding, but basically icon size
         tray_padding 4
@@ -67,7 +70,8 @@ input type:touchpad {
 seat * hide_cursor 8000 \
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_2048x1536.png fill
-# output * bg #282828 solid_color
+
+output eDP-1 scale 1.05
 
 # Setting default border for windows
 default_border pixel 3
@@ -80,7 +84,7 @@ default_floating_border none
 #bindsym $mod+v exec clipman pick --tool wofi -T'-i'
 
 # Start wlsunset (around Prague) (Redshift, basically)
-exec wlsunset -l 49.9 -L 14.6
+exec wlsunset -l 49.9 -L 14.6 -t 3800
 
 # Mako start
 exec mako

@@ -20,11 +20,11 @@ install_ranger: false
 install_aerc: true
 
 # Sway
-install_sway: false
-compile_mako: false
-compile_wofi: false
-compile_wl_clipboard_x11: false
-compile_wlsusnet: false
+install_sway: true
+compile_mako: true
+compile_wofi: true
+compile_wl_clipboard_x11: true
+compile_wlsusnet: true
 # !Sway
 
 # BROWSER(S) TO INSTALL
@@ -46,7 +46,6 @@ install_rpmfusion:
   nonfree: false
 
 packages:
-  - power-profiles-daemon
   - NetworkManager-fortisslvpn
   - NetworkManager-fortisslvpn-gnome
   - NetworkManager-openvpn
@@ -63,7 +62,6 @@ packages:
   - dnf-plugins-core
   - nmap
   - neofetch
-  - rpmfusion-free-release
   - "@Development Tools"
   - ripgrep
   - setroubleshoot-server
@@ -91,13 +89,11 @@ packages:
 
 flatpaks:
   - org.gnome.Geary
-  - org.telegram.desktop
   - com.spotify.Client
   - com.slack.Slack
   - org.gimp.GIMP
   - org.libreoffice.LibreOffice
   - org.remmina.Remmina
-  - org.signal.Signal
   - com.github.tchx84.Flatseal
   - org.filezillaproject.Filezilla
   - com.obsproject.Studio
