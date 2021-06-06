@@ -132,6 +132,9 @@ bindsym $mod+b exec $browser --enable-features=UseOzonePlatform --ozone-platform
 # Set player to spotify
 set $player spotify
 
+# use mod+p to open element chat (with Wayland enabled)
+bindym $mod+p exec flatpak run im.riot.Riot --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer --ozone-platform=wayland
+
 # Media player controls (visit https://github.com/altdesktop/playerctl for options)
 bindsym XF86AudioPlay exec playerctl --player=$player play-pause
 bindsym XF86AudioNext exec playerctl --player=$player next
@@ -142,8 +145,8 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2% #incr
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
-bindsym XF86MonBrightnessUp exec light -A 2
-bindsym XF86MonBrightnessDown exec light -U 2
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
 
 set $j j
 set $h h
