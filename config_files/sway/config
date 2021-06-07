@@ -133,7 +133,7 @@ bindsym $mod+b exec $browser --enable-features=UseOzonePlatform --ozone-platform
 set $player spotify
 
 # use mod+p to open element chat (with Wayland enabled)
-bindym $mod+p exec flatpak run im.riot.Riot --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer --ozone-platform=wayland
+bindsym $mod+p exec flatpak run im.riot.Riot --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer --ozone-platform=wayland
 
 # Media player controls (visit https://github.com/altdesktop/playerctl for options)
 bindsym XF86AudioPlay exec playerctl --player=$player play-pause
