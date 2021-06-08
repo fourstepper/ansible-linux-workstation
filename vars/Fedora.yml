@@ -2,7 +2,6 @@
 upgrade: false
 src_dir: "$HOME/workspace/src"
 
-dante_installed: true
 install_docker: true
 install_org: true
 install_packages: true
@@ -18,9 +17,10 @@ install_weechat: true
 
 install_ranger: false
 install_aerc: true
+dante_installed: false
 
 # Sway
-install_sway: true
+install_sway: false
 compile_mako: true
 compile_wofi: true
 compile_wl_clipboard_x11: true
@@ -46,6 +46,7 @@ install_rpmfusion:
   nonfree: false
 
 packages:
+  - power-profiles-daemon
   - NetworkManager-fortisslvpn
   - NetworkManager-fortisslvpn-gnome
   - NetworkManager-openvpn
