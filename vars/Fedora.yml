@@ -90,6 +90,7 @@ flatpaks:
   - com.github.tchx84.Flatseal
   - org.filezillaproject.Filezilla
   - com.obsproject.Studio
+  - org.gnome.gitlab.somas.Apostrophe
 
 pip_packages:
   - pynvim
