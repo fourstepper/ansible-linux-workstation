@@ -33,8 +33,10 @@ call plug#begin('~/.vim/plugged')
         Plug 'luochen1990/rainbow'
     " Vim + Tmux = <3
         Plug 'christoomey/vim-tmux-navigator'
+    " Golang
+        Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-call plug#end()
+    call plug#end()
 " -------------
 
 " Set proper color in Vim
@@ -168,7 +170,7 @@ colorscheme gruvbox
 " coc.vim configuration
 
 " Automatically install these extensions
-let g:coc_global_extensions = ['coc-sh', 'coc-yaml', 'coc-pyls', 'coc-json', 'coc-go', 'coc-html', 'coc-css', 'coc-toml']
+let g:coc_global_extensions = ['coc-sh', 'coc-yaml', 'coc-json', 'coc-html', 'coc-css', 'coc-toml', 'coc-pyright']
 
 " TextEdit might fail if hidden is not set.
 set hidden

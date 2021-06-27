@@ -16,7 +16,7 @@ install_browserpass: true
 install_weechat: true
 
 install_ranger: false
-install_aerc: true
+install_aerc: false
 dante_installed: false
 
 # Sway
@@ -28,12 +28,12 @@ compile_wlsusnet: true
 # !Sway
 
 # BROWSER(S) TO INSTALL
-install_firefox: false
+install_firefox: true
 # install chromium instead of Brave browser on Debian
-install_chromium: false
+install_chromium: true
 
 install_chrome: false
-install_brave: true
+install_brave: false
 
 # RPMFusion config
 # Options:
@@ -68,19 +68,18 @@ packages:
   - bind-utils
   - python3
   - python3-devel
-  - xdg-desktop-portal
-  - xdg-desktop-portal-wlr
-  - xdg-desktop-portal-gtk
   - podman
   - docker-compose
   - gnome-themes-extra
   - kubernetes-client
+  - gocryptfs
   # For dnf tab search
   - sqlite
   # Somehow doesn't work well when installed just via pip
   - vdirsyncer
 
 flatpaks:
+  - org.keepassxc.KeePassXC
   - org.gnome.Geary
   - com.spotify.Client
   - com.slack.Slack
@@ -94,3 +93,5 @@ flatpaks:
 
 pip_packages:
   - pynvim
+  - pyls
+  - python-language-server
