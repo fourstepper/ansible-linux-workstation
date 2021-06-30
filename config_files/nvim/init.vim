@@ -14,7 +14,9 @@ call plug#begin('~/.vim/plugged')
     " Fuzzy find 2
         Plug 'junegunn/fzf.vim'
     " Gruvbox theme
-        Plug 'morhetz/gruvbox'
+    "   Plug 'morhetz/gruvbox'
+    " Onehalf theme
+       Plug 'sonph/onehalf', { 'rtp': 'vim' }
     " Git stuff
         Plug 'tpope/vim-fugitive'
     " More git stuff
@@ -113,9 +115,7 @@ set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
 
 " Settings for the color scheme.
-set background=dark    " Setting dark mode
-colorscheme gruvbox
-"let g:gruvbox_contrast_dark = 'hard'
+colorscheme onehalflight
 
 " set Vim-specific sequences for RGB colors
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

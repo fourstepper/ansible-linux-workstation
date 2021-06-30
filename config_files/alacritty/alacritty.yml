@@ -7,36 +7,62 @@ window:
     x: 0
     y: 0
 
-# Colors (Gruvbox dark)
+# Colors (One Half Light)
 colors:
-  # Default colors
   primary:
-    # hard contrast: background = '#1d2021'
-    background: '#282828'
-    # soft contrast: background = '#32302f'
-    foreground: '#d3d7cf'
+    background: '0xfafafa'
+    foreground: '0x383a42'
 
-  # Normal colors
   normal:
-    black: '#282828'
-    red: '#aa0000'
-    green: '#00aa00'
-    yellow: '#f5dd2f'
-    blue: '#2693df'
-    magenta: '#aa00aa'
-    cyan: '#00aaaa'
-    white: '#aaaaaa'
+    black: '0x383a42'
+    red: '0xe45649'
+    green: '0x50a14f'
+    yellow: '0xc18401'
+    blue: '0x0184bc'
+    magenta: '0xa626a4'
+    cyan: '0x0997b3'
+    white: '0xfafafa'
 
-  # Bright colors
   bright:
-    black: '#282828'
-    red: '#aa0000'
-    green: '#00aa00'
-    yellow: '#f5dd2f'
-    blue: '#2693df'
-    magenta: '#aa00aa'
-    cyan: '#00aaaa'
-    white: '#aaaaaa'
+    black: '0x383a42'
+    red: '0xe45649'
+    green: '0x50a14f'
+    yellow: '0xc18401'
+    blue: '0x0184bc'
+    magenta: '0xa626a4'
+    cyan: '0x0997b3'
+    white: '0xfafafa'
+
+# Colors (Gruvbox dark)
+# colors:
+#   # Default colors
+#   primary:
+#     # hard contrast: background = '#1d2021'
+#     background: '#282828'
+#     # soft contrast: background = '#32302f'
+#     foreground: '#d3d7cf'
+
+#   # Normal colors
+#   normal:
+#     black: '#282828'
+#     red: '#aa0000'
+#     green: '#00aa00'
+#     yellow: '#f5dd2f'
+#     blue: '#2693df'
+#     magenta: '#aa00aa'
+#     cyan: '#00aaaa'
+#     white: '#aaaaaa'
+
+#   # Bright colors
+#   bright:
+#     black: '#282828'
+#     red: '#aa0000'
+#     green: '#00aa00'
+#     yellow: '#f5dd2f'
+#     blue: '#2693df'
+#     magenta: '#aa00aa'
+#     cyan: '#00aaaa'
+#     white: '#aaaaaa'
 
 # Font configuration
 font:
