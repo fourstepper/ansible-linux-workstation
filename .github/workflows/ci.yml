@@ -1,6 +1,6 @@
 ---
 name: CI
-'on':
+"on":
   pull_request:
   push:
     branches:
@@ -10,10 +10,9 @@ name: CI
 
 defaults:
   run:
-    working-directory: 'ansible-linux-workstation'
+    working-directory: "ansible-linux-workstation"
 
 jobs:
-
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -21,13 +20,13 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'ansible-linux-workstation'
+          path: "ansible-linux-workstation"
           submodules: recursive
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install test dependencies.
         run: pip3 install yamllint
@@ -41,20 +40,20 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: fedora34
-            image: docker.io/geerlingguy/docker-fedora34-ansible
+          - name: fedora35
+            image: docker.io/geerlingguy/docker-fedora35-ansible
 
     steps:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'ansible-linux-workstation'
+          path: "ansible-linux-workstation"
           submodules: recursive
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install test dependencies.
         run: pip3 install ansible molecule[docker] docker
@@ -62,6 +61,6 @@ jobs:
       - name: Run Molecule tests
         run: molecule test
         env:
-          PY_COLORS: '1'
-          ANSIBLE_FORCE_COLOR: '1'
+          PY_COLORS: "1"
+          ANSIBLE_FORCE_COLOR: "1"
           IMAGE: ${{ matrix.image }}
