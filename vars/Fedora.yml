@@ -76,7 +76,7 @@ packages:
   - powerline-fonts
 
 flatpaks:
-  - org.gnome.Geary
+  - org.mozilla.Thunderbird
   - com.spotify.Client
   - com.slack.Slack
   - org.gimp.GIMP
