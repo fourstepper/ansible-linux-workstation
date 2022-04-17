@@ -3,18 +3,18 @@ upgrade: false
 src_dir: "$HOME/workspace/src"
 
 install_docker: true
-install_org: true
 install_packages: true
-install_configuration: true
 install_logiops: true
-install_terminal: true
-install_alacritty: true
-install_neovim: true
-install_tmux: true
-install_fonts: true
-install_browserpass: true
-install_weechat: true
 
+install_org: false
+install_configuration: false
+install_terminal: false
+install_alacritty: false
+install_neovim: false
+install_tmux: false
+install_fonts: false
+install_browserpass: false
+install_weechat: false
 install_ranger: false
 install_aerc: false
 dante_installed: false
@@ -29,7 +29,6 @@ compile_wlsusnet: false
 # BROWSER(S) TO INSTALL
 install_firefox: true
 install_chromium: true
-
 install_chrome: false
 install_brave: false
 
@@ -44,12 +43,14 @@ install_rpmfusion:
   nonfree: false
 
 packages:
+  - foot
+  - "@Development Tools"
+  - gcc-c++
   - power-profiles-daemon
   - fedora-workstation-repositories
   - dnf-plugins-core
   - nmap
   - neofetch
-  - "@Development Tools"
   - ripgrep
   - setroubleshoot-server
   - smartmontools
@@ -63,9 +64,16 @@ packages:
   - docker-compose
   - gnome-themes-extra
   - kubernetes-client
-  # For dnf tab search
   - sqlite
+  - sqlite-devel
   - syncthing
+  # fonts
+  - dejavu-sans-fonts
+  - dejavu-sans-mono-fonts
+  - abattis-cantarell-fonts.noarch
+  - fontawesome-fonts
+  - powerline
+  - powerline-fonts
 
 flatpaks:
   - org.gnome.Geary
