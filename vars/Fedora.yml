@@ -4,7 +4,7 @@ src_dir: "$HOME/workspace/src"
 
 install_docker: true
 install_packages: true
-install_logiops: true
+install_logiops: false
 
 install_org: false
 install_configuration: false
@@ -67,7 +67,13 @@ packages:
   - kubernetes-client
   - sqlite
   - sqlite-devel
+  - terraform
   - syncthing
+  - fzf
+  - lutris
+  - wine
+  - go
+  - hugo
   # fonts
   - dejavu-sans-fonts
   - dejavu-sans-mono-fonts
@@ -79,16 +85,25 @@ packages:
 flatpaks:
   - org.mozilla.Thunderbird
   - com.spotify.Client
+  - im.riot.Riot
+  - org.signal.Signal
   - com.slack.Slack
+  - com.discordapp.Discord
   - org.gimp.GIMP
   - org.libreoffice.LibreOffice
-  - org.gnome.Connections
   - nl.hjdskes.gcolor3
   - com.github.tchx84.Flatseal
   - com.obsproject.Studio
   - net.cozic.joplin_desktop
+  - org.gnome.Extensions
+  - org.gnome.seahorse.Application
 
 pip_packages:
   - pynvim
-  - pyls
-  - python-language-server
+  - black
+
+cargo_packages:
+  - stylua
+
+yarn_packages:
+  - yaml-language-server
