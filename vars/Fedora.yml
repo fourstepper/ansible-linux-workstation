@@ -30,7 +30,7 @@ compile_wlsusnet: false
 install_firefox: true
 install_chromium: true
 install_chrome: false
-install_brave: false
+install_brave: true
 
 # RPMFusion config
 # Options:
@@ -71,6 +71,8 @@ packages:
   - syncthing
   - fzf
   - lutris
+  - solaar
+  - htop
   - wine
   - go
   - hugo
@@ -97,6 +99,10 @@ flatpaks:
   - net.cozic.joplin_desktop
   - org.gnome.Extensions
   - org.gnome.seahorse.Application
+  - com.github.jeromerobert.pdfarranger
+  - com.belmoussaoui.Obfuscate
+  - org.kde.kdenlive
+  - com.github.iwalton3.jellyfin-media-player
 
 pip_packages:
   - pynvim
@@ -107,3 +113,10 @@ cargo_packages:
 
 yarn_packages:
   - yaml-language-server
+
+npm_packages:
+  - dockerfile-language-server-nodejs
+
+go_packages:
+  - golang.org/x/tools/gopls@latest
+  - github.com/go-delve/delve/cmd/dlv@latest
