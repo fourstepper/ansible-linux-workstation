@@ -62,6 +62,7 @@ packages:
   - python3
   - python3-devel
   - podman
+  - podman-compose
   - docker-compose
   - gnome-themes-extra
   - kubernetes-client
