@@ -3,55 +3,7 @@
   scm: git
   version: main
 
-- src: git@github.com:fourstepper/ansible-role-configuration
-  scm: git
-  version: main
-
 - src: git@github.com:fourstepper/ansible-role-logiops
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-sway
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-alacritty
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-ranger
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-neovim
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-tmux
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-fonts
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-shell
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-browserpass
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-aerc
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-org
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-weechat
   scm: git
   version: main
 

@@ -40,8 +40,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: fedora35
-            image: docker.io/geerlingguy/docker-fedora35-ansible
+          - name: fedora37
+            image: docker.io/geerlingguy/docker-fedora37-ansible
 
     steps:
       - name: Check out the codebase.

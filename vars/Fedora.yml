@@ -1,30 +1,10 @@
 ---
-upgrade: false
+upgrade: true
 src_dir: "$HOME/workspace/src"
 
 install_docker: true
 install_packages: true
 install_logiops: false
-
-install_org: false
-install_configuration: false
-install_terminal: false
-install_alacritty: false
-install_neovim: false
-install_tmux: false
-install_fonts: false
-install_browserpass: false
-install_weechat: false
-install_ranger: false
-install_aerc: false
-dante_installed: false
-
-# Sway
-install_sway: false
-compile_mako: false
-compile_wofi: false
-compile_wl_clipboard_x11: false
-compile_wlsusnet: false
 
 # BROWSER(S) TO INSTALL
 install_firefox: true

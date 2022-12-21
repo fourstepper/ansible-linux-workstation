@@ -67,44 +67,11 @@
     - role: ansible-role-packages
       when: install_packages|default(false)
 
-    - role: ansible-role-aerc
-      when: install_aerc|default(false)
-
-    - role: ansible-role-browserpass
-      when: install_browserpass|default(false)
-
-    - role: ansible-role-sway
-      when: install_sway|default(false)
-
-    - role: ansible-role-org
-      when: install_org|default(false)
-
-    - role: ansible-role-tmux
-      when: install_tmux|default(false)
-
-    - role: ansible-role-alacritty
-      when: install_alacritty|default(false)
-
-    - role: ansible-role-fonts
-      when: install_fonts|default(false)
-
     - role: ansible-role-neovim
       when: install_neovim|default(false)
 
-    - role: ansible-role-configuration
-      when: install_configuration|default(false)
-
     - role: ansible-role-logiops
       when: install_logiops|default(false)
-
-    - role: ansible-role-shell
-      when: install_terminal|default(false)
-
-    - role: ansible-role-ranger
-      when: install_ranger|default(false)
-
-    - role: ansible-role-weechat
-      when: install_weechat|default(false)
 
     - role: geerlingguy.docker
       become: true
