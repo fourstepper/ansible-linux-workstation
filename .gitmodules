@@ -1,4 +1,0 @@
-[submodule "molecule"]
-	path = molecule
-	url = https://github.com/fourstepper/ansible-molecule-submodule.git
-        branch = main
