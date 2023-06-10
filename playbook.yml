@@ -67,9 +67,6 @@
     - role: ansible-role-packages
       when: install_packages|default(false)
 
-    - role: ansible-role-neovim
-      when: install_neovim|default(false)
-
     - role: ansible-role-logiops
       when: install_logiops|default(false)
 

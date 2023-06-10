@@ -30,6 +30,7 @@ packages:
   - power-profiles-daemon
   - fedora-workstation-repositories
   - dnf-plugins-core
+  - neovim
   - nmap
   - neofetch
   - ripgrep
@@ -48,7 +49,6 @@ packages:
   - kubernetes-client
   - sqlite
   - sqlite-devel
-  - terraform
   - syncthing
   - fzf
   - lutris
@@ -100,4 +100,3 @@ npm_packages:
 
 go_packages:
   - golang.org/x/tools/gopls@latest
-  - github.com/go-delve/delve/cmd/dlv@latest
