@@ -4,7 +4,7 @@ ansible meta-playbook for bootstrapping and managing workstation machines
 
 ## Usage
 
-`ansible-playbook -i inventory --diff -K playbook.yml --vault-password-file=<your_password_file>`
+`ansible-playbook -i inventory -K playbook.yml --vault-password-file=<your_password_file>`
 
 ## Vars
 
