@@ -97,6 +97,7 @@ yarn_packages:
 
 npm_packages:
   - dockerfile-language-server-nodejs
+  - vscode-langservers-extracted
 
 go_packages:
   - golang.org/x/tools/gopls@latest
