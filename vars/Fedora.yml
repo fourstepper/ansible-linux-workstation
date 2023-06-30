@@ -87,19 +87,12 @@ flatpaks:
 
 pip_packages:
   - pynvim
-  - black
 
-cargo_packages:
-  - stylua
+yarn_packages: []
 
-yarn_packages:
-  - yaml-language-server
-
-npm_packages:
-  - dockerfile-language-server-nodejs
-  - vscode-langservers-extracted
+npm_packages: []
 
 go_packages:
-  - golang.org/x/tools/gopls@latest
   - github.com/derailed/k9s@latest
   - sigs.k8s.io/kind@v0.19.0
+  - github.com/jrhouston/tfk8s@latest
