@@ -26,6 +26,7 @@ packages:
   - foot
   - wireguard-tools
   - "@Development Tools"
+  - just
   - gcc-c++
   - power-profiles-daemon
   - fedora-workstation-repositories
