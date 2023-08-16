@@ -69,6 +69,7 @@ packages:
   - powerline-fonts
 
 flatpaks:
+  - org.subsurface_divelog.Subsurface
   - org.mozilla.Thunderbird
   - com.spotify.Client
   - im.riot.Riot
