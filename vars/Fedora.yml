@@ -23,6 +23,8 @@ install_rpmfusion:
   nonfree: false
 
 packages:
+  - git
+  - git-lfs
   - foot
   - wireguard-tools
   - "@Development Tools"
@@ -82,6 +84,7 @@ flatpaks:
   - org.gnome.Extensions
   - org.gnome.seahorse.Application
   - com.github.jeromerobert.pdfarranger
+  - com.usebottles.bottles
   - com.belmoussaoui.Obfuscate
   - org.kde.kdenlive
   - com.github.iwalton3.jellyfin-media-player
@@ -91,7 +94,8 @@ pip_packages:
 
 yarn_packages: []
 
-npm_packages: []
+npm_packages:
+  vercel
 
 go_packages:
   - github.com/derailed/k9s@latest
