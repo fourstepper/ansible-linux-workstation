@@ -1,0 +1,12 @@
+- name: ensure fonts directory
+  file:
+    path: "{{ lookup('env', 'HOME') }}/.fonts"
+    state: directory
+
+- name: Download {{ item }}
+  ansible.builtin.unarchive:
+    src: "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/{{ item }}.tar.xz"
+    dest: "{{ lookup('env', 'HOME') }}/.fonts/"
+    remote_src: true
+  with_items: "{{ fonts }}"
+  changed_when: false

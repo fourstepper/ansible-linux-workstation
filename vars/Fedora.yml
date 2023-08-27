@@ -10,7 +10,7 @@ install_logiops: false
 install_firefox: true
 install_chromium: true
 install_chrome: false
-install_brave: true
+install_brave: false
 
 # RPMFusion config
 # Options:
@@ -102,3 +102,6 @@ go_packages:
   - github.com/derailed/k9s@latest
   - sigs.k8s.io/kind@v0.19.0
   - github.com/jrhouston/tfk8s@latest
+
+fonts:
+  - JetBrainsMono
