@@ -89,7 +89,6 @@ flatpaks:
   - com.belmoussaoui.Obfuscate
   - org.kde.kdenlive
   - com.github.iwalton3.jellyfin-media-player
-  - app.organicmaps.desktop
 
 pip_packages:
   - pynvim
