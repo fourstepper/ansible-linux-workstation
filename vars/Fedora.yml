@@ -78,7 +78,7 @@ flatpaks:
   - com.discordapp.Discord
   - org.gimp.GIMP
   - org.libreoffice.LibreOffice
-  - nl.hjdskes.gcolor3
+  - com.github.finefindus.eyedropper
   - com.github.tchx84.Flatseal
   - com.obsproject.Studio
   - net.cozic.joplin_desktop
