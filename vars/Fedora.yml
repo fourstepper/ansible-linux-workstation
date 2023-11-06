@@ -1,5 +1,5 @@
 ---
-upgrade: true
+upgrade: false
 src_dir: "$HOME/workspace/src"
 
 install_docker: true
