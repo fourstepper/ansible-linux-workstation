@@ -69,6 +69,10 @@
     - role: ansible-role-packages
       when: install_packages|default(false)
 
+    - role: ansible-role-borgmatic
+      when: install_borgmatic|default(false)
+      become: true
+
     - role: ansible-role-logiops
       when: install_logiops|default(false)
 

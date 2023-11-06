@@ -8,3 +8,7 @@
   version: main
 
 - src: geerlingguy.docker
+
+- src: git@codeberg.org:fourstepper/ansible-role-borgmatic
+  scm: git
+  version: main
