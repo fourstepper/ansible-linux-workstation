@@ -73,9 +73,6 @@
       when: install_borgmatic|default(false)
       become: true
 
-    - role: ansible-role-logiops
-      when: install_logiops|default(false)
-
     - role: geerlingguy.docker
       become: true
       when: install_docker|default(false)

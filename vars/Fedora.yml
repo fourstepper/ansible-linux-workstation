@@ -4,7 +4,6 @@ src_dir: "$HOME/workspace/src"
 
 install_docker: true
 install_packages: true
-install_logiops: false
 
 # BROWSER(S) TO INSTALL
 install_firefox: true

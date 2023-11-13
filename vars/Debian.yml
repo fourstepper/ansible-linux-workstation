@@ -14,7 +14,6 @@ install_sway: true
 install_fonts: true
 install_alacritty: true
 install_packages: true
-install_logiops: true
 install_weechat: true
 #
 # Sway

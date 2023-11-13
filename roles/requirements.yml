@@ -1,9 +1,5 @@
 ---
-- src: git@github.com:fourstepper/ansible-role-packages
-  scm: git
-  version: main
-
-- src: git@github.com:fourstepper/ansible-role-logiops
+- src: git@codeberg.org:fourstepper/ansible-role-packages
   scm: git
   version: main
 
