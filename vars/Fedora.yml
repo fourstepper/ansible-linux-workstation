@@ -2,7 +2,7 @@
 upgrade: false
 src_dir: "$HOME/workspace/src"
 
-install_docker: true
+install_docker: false
 install_packages: true
 
 # BROWSER(S) TO INSTALL
