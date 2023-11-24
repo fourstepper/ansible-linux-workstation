@@ -1,5 +1,7 @@
 ---
 - hosts: all
+  vars_files:
+    - vars/main.yml
 
   pre_tasks:
     - name: Include the distribution vars

@@ -15,6 +15,12 @@ repositories:
     - path: ssh://u375033-sub1@u375033.your-storagebox.de:23/./desktop.borg
       label: hetzner
 
+ntfy:
+  topic: "{{ borgmatic_ntfy_topic }}"
+  fail:
+    title: A borgmatic backup failed on "{{ ansible_host }}"
+    message: You should probably fix it
+
 keep_daily: 7
 keep_weekly: 4
 keep_monthly: 6
