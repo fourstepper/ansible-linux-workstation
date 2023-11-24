@@ -18,7 +18,7 @@ repositories:
 ntfy:
   topic: "{{ borgmatic_ntfy_topic }}"
   fail:
-    title: A borgmatic backup failed on "{{ ansible_host }}"
+    title: A borgmatic backup failed on {{ ansible_hostname }}
     message: You should probably fix it
 
 keep_daily: 7
