@@ -94,9 +94,6 @@ pip_packages:
 
 yarn_packages: []
 
-npm_packages:
-  vercel
-
 go_packages:
   - github.com/derailed/k9s@latest
   - sigs.k8s.io/kind@v0.19.0
