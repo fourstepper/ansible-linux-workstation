@@ -29,6 +29,7 @@ packages:
   - "@Development Tools"
   - just
   - gcc-c++
+  - pre-commit
   - power-profiles-daemon
   - fedora-workstation-repositories
   - dnf-plugins-core
