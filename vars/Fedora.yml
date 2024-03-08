@@ -59,6 +59,7 @@ packages:
   - htop
   - wine
   - go
+  - golang-godoc
   - hugo
   # fonts
   - dejavu-sans-fonts
@@ -77,7 +78,6 @@ flatpaks:
   - com.slack.Slack
   - com.discordapp.Discord
   - org.gimp.GIMP
-  - org.libreoffice.LibreOffice
   - com.github.finefindus.eyedropper
   - com.github.tchx84.Flatseal
   - com.obsproject.Studio
